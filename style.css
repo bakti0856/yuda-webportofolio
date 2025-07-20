@@ -10,7 +10,7 @@ body {
 /* navrbar */
 .navbar {
   background-color: #190a70;
-  padding: 10px 15px;
+  padding: 10px 20px;
    transform: translateY(-30px);
   animation: slideDown 1s ease forwards;
 }
