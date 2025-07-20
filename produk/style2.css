@@ -1,0 +1,70 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #000000; /* dark background */
+  color: #fff; /* white text */
+  scroll-behavior: smooth;
+}
+h2 {
+  border-bottom: 2px solid #444;
+  padding-bottom: 5px;
+}
+/* produk */
+.alok {
+   background-color: #160c27;
+   max-width: 500px;
+   margin: 20px auto;
+   border-radius: 12px;
+   border-bottom: 2px solid #444;
+   padding-bottom: 5px;
+   font-size: 25px;
+
+}
+.kumpul {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 30px;
+  transform: translateY(-30px);
+  animation: slideDown 1s ease forwards;
+
+  scroll-behavior: smooth;
+}  
+.text { 
+  background-color: #160c27;
+   margin: 20px auto;
+   text-align: center;
+   padding: 2px;
+   max-width: 900px;
+   border-radius: 10px;
+}
+.isi {
+  width: 300PX;
+  height: 500pxpx;
+  background-color: rgb(100, 100, 100);
+  border-radius: 10px;
+  flex-shrink: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: #95999b solid 3px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+.isi:hover {
+  transform: scale(1.02);
+}
+.container {
+  background-color: #160c27;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+
+}
+#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

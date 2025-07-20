@@ -1,0 +1,190 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #000000; /* dark background */
+  color: #fff; /* white text */
+  scroll-behavior: smooth;
+
+}
+/* navrbar */
+.navbar {
+  background-color: #190a70;
+  padding: 15px 30px;
+   transform: translateY(-30px);
+  animation: slideDown 1s ease forwards;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0px;
+  margin-right: 18px;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+  justify-content: flex-end;
+  transform: translateY(-30px);
+  animation: slideDown 1s ease forwards;
+
+}
+
+.navbar li {
+  display: inline;
+  border: white solid 1px;
+  border-radius: 10px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #0c08088f;
+  border-radius: 4px;
+  transform: scale(1.02);
+}
+/* Header */
+header {
+  color: rgb(255, 255, 255);
+  padding: 40px 20px;
+  text-align: center;
+  animation: slideDown 2s ease forwards;
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease forwards;
+  opacity: 0;
+  border: #cfbfbf solid 2px;
+  box-shadow: 25px rgba(98, 20, 201, 0.863);
+}
+.judul {
+  text-align: center;
+}
+
+/* Section content */
+section {
+  background: #160c27;
+  padding: 20px;
+  max-width: 800px;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.8s ease-out;
+  animation: slideDown 2s ease forwards;
+}
+
+section.visible {
+  transform: translateY(0);
+  opacity: 1;
+  text-transform: none;
+}
+.wa {
+  text-decoration: none;
+  padding: 10px;
+  color: #0af7ff;
+  border: #086786 solid 2px;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+h2 {
+  border-bottom: 2px solid #444;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+/* Project cards */
+.project {
+  background: #000000;
+  color: #fff;
+  padding: 15px;
+  margin-top: 10px;
+  border-left: 4px solid #086786;
+  border-radius: 8px;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+.project1 {
+  background: #000000;
+  color: #fff;
+  padding: 15px;
+  margin-top: 10px;
+  border-left: 4px solid #1800a1;
+  border-radius: 8px;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+.wa:hover {
+  transform: scale(1.05);
+}
+.project:hover {
+  transform: scale(1.02);
+}
+
+.project1:hover {
+  transform: scale(1.02);
+}
+.gambar:hover {
+  transform: scale(1.02);
+}
+.ahli {
+  padding: 20px;
+  max-width: 800px;
+  margin: 30px auto;
+  background-color:#160c27;
+  color: #fff;
+  border-radius: 100px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+.gambar {
+  width: 300px;
+  height: auto;
+  padding: 0px;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+
+} 
+/* Footer */
+footer {
+  text-align: center;
+  background: #000;
+  color: rgb(230, 230, 230);
+  padding: 15px;
+  margin-top: 40px;
+  border-top: #fff solid 2px;
+}
+#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+/* Animasi */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

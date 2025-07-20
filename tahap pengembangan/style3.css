@@ -1,0 +1,20 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #000000; /* dark background */
+  color: #fff; /* white text */
+  scroll-behavior: smooth;
+}
+.container {
+  text-align: center;
+  padding: 2px;
+  height: auto;
+  background-color: #000000;
+}
+#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

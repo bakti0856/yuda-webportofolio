@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>produk</title>
+    <link rel="icon" href="../produk/jy-logo.jpg"
+  type="image/jpg" />
+   <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+    <canvas id="stars"></canvas>
+    <div class="text">
+      <h2> Produk JY OFFC</h2>
+      <header class="kumpul">
+         <img src="../gambar/list1.jpg" class="isi">
+         <img src="../gambar/list2.jpg" class="isi">
+         <img src="../gambar/list3.jpg" class="isi">
+         <img src="../gambar/list4.jpg" class="isi">
+         <img src="../gambar/list5.jpg" class="isi">
+      </header>
+   </div>
+   <div class="container">
+    <h2>layanan ini tahap pengembangan</h2>
+   </div>
+     <script>
+  const canvas = document.getElementById("stars");
+  const ctx = canvas.getContext("2d");
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const stars = Array.from({ length: 150 }, () => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    r: Math.random() * 1.5,
+    d: Math.random() * 0.5 + 0.5
+  }));
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "white";
+    stars.forEach(star => {
+      ctx.beginPath();
+      ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
+      ctx.fill();
+      star.y += star.d;
+      if (star.y > canvas.height) {
+        star.y = 0;
+        star.x = Math.random() * canvas.width;
+      }
+    });
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+  window.addEventListener("resize", () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  });
+</script>
+
+</body>
+</html>
