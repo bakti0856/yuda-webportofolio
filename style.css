@@ -20,7 +20,7 @@ body {
   margin: 0px;
   padding: 0;
   display: flex;
-  gap: 25px;
+  gap: 10px;
   justify-content: flex-end;
   transform: translateY(-30px);
   animation: slideDown 1s ease forwards;
