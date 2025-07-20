@@ -21,6 +21,7 @@ body {
   padding: 0;
   display: flex;
   gap: 15px;
+  justify-content: center;
   transform: translateY(-30px);
   animation: slideDown 1s ease forwards;
 
