@@ -1,0 +1,222 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, #887e7e,#7bdaffb9 );
+  color: #000000; /* white text */
+  scroll-behavior: smooth;
+
+}
+/* navrbar */
+.navbar {
+  background-color: #8bd6f3b6;
+  padding: 15px 30px;
+  transform: translateY(-30px);
+  animation: slideDown 1s ease forwards;
+  box-shadow: 0px 0px 10px black;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  transform: translateY(-30px);
+  animation: slideDown 1s ease forwards;
+
+}
+
+.navbar li {
+  display: inline;
+  border-radius: 10px;
+}
+
+.navbar a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 10px 10px;
+  display: block;
+  transform: scale(0.95); 
+  transition: transform 0.3s ease;
+  border: 2px solid rgb(214, 248, 244);
+  border-radius: 10px;
+ 
+}
+
+.navbar a:hover {
+  border-radius: 4px;
+  transform: scale(1.02);
+}
+.navbar a:active {
+  color: #086786;
+}
+/* Header */
+header {
+  color: rgb(255, 255, 255);
+  padding: 40px 20px ;
+  text-align: center;
+  animation: slideDown 2s ease forwards;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all 0.8s ease-out;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  margin-bottom: 20px;
+  animation: fadeIn 1.5s ease forwards;
+  opacity: 0;
+  border: #ffffff solid 1px;
+  box-shadow: 0px 0px 10px black;
+}
+.judul {
+  text-align: center;
+}
+.kumpul2 {
+    border-radius: 10px;
+    margin: 30px auto;
+    text-align: center;
+    padding-top: 10px;
+}
+.kumpul {
+    display: flex; 
+    gap: 15px;
+    overflow-x: auto;
+    box-sizing: border-box;
+    padding: 25px;
+    justify-content: center;
+}
+.card {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: azure;
+    box-shadow: 0px 0px 10px;
+    flex-shrink: 0;
+    background-color:#d8d7d7 ;
+    padding: 10px;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+/* Section content */
+section {
+  background: #8bd6f3b6;
+  padding: 20px;
+  max-width: 800px;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px black;
+  transform: translateY(50px);
+  animation: slideDown 2s ease forwards;
+  opacity: 0;
+}
+
+section.visible {
+  transform: translateY(0);
+  opacity: 1;
+  text-transform: none;
+}
+.wa {
+  text-decoration: none;
+  padding: 10px;
+  color: #0af7ff;
+  border: #086786 solid 2px;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+h2 {
+  border-bottom: 2px solid #444;
+  padding-bottom: 5px;
+  text-align: center
+}
+
+/* Project cards */
+.project {
+  background: #d8d7d7;
+  color: #000000;
+  padding: 15px;
+  margin-top: 10px;
+  border-left: 4px solid #000000;
+  box-shadow: 0px 0px 5px black;
+  border-radius: 8px;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+.project1 {
+  background: #d8cfcf;
+  color: #000000;
+  padding: 15px;
+  margin-top: 10px;
+  border-left: 4px solid #000000;
+  box-shadow: 0px 0px 5px black;
+  border-radius: 8px;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding-left: 15px;
+}
+/* animasi */
+.card:hover {
+  transform: scale(1.0);
+}
+.wa:hover {
+  transform: scale(1.0);
+}
+
+.project:hover {
+  transform: scale(1.02);
+}
+
+.project1:hover {
+  transform: scale(1.02);
+}
+
+.gambar:hover {
+  transform: scale(1.02);
+}
+.ahli {
+  padding: 20px;
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #8bd6f3b6;
+  color: #000000;
+  border-radius: 100px;
+  text-align: center;
+  box-shadow: 0 0 10px black;
+}
+.gambar {
+  width: 200px;
+  height: auto;
+  padding: 0px;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+
+} 
+/* Footer */
+footer {
+  text-align: center;
+  background: #8bd6f3b6;
+  color: rgb(0, 0, 0);
+  padding: 15px;
+  margin-top: 40px;
+  border-top: #000000 solid 2px;
+}
+/* Animasi */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
