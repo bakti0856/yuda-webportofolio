@@ -92,7 +92,6 @@ header {
     overflow-x: auto;
     box-sizing: border-box;
     padding: 25px;
-    justify-content: center;
 }
 .card {
     height: 200px;
@@ -225,3 +224,4 @@ footer {
   }
 
 }
+
