@@ -1,0 +1,88 @@
+/* Global styles */
+*{
+  font-family: Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  color: #000000; /* white text */
+}
+body {
+    background: linear-gradient(to right, #285d81,#7bdaffb9 );
+}
+h1 {
+  text-align: center;
+  padding: 25px;
+}
+h2 {
+  border-bottom: 2px solid rgb(112, 110, 107);
+}
+a {
+  text-decoration: none;
+  color: blue;
+}
+.banner {
+  padding: 0px;
+  background-color: #8bd6f3;
+  width: 100%;
+  height: 100px;
+  border-bottom: 2px solid white;
+  box-shadow: 0px 0px 5px rgb(0, 0, 0);
+  animation: slideDown 1s ease forwards;
+  transform: translateY(-30px);
+} 
+
+/* produk */
+.kumpul {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.text { 
+  background-color: #8bd6f3f8;
+   margin: 20px auto;
+   text-align: center;
+   padding: 10px;
+   max-width: 700px;
+   border-radius: 10px;
+   box-shadow: 0px 0px 10px;
+   margin-top: 60px;
+}
+.isi {
+  width: 250PX;
+  height: 300px;
+  background-color: rgb(100, 100, 100);
+  border-radius: 10px;
+  flex-shrink: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: #feffff solid 3px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1); 
+  transition: transform 0.3s ease;
+ 
+}
+.isi:hover {
+   transform: scale(1.16);
+}
+.kontak { 
+   background-color: #8bd6f3f8;
+   margin: 20px auto;
+   text-align: center;
+   padding: 10px;
+   max-width: 700px;
+   border-radius: 10px;
+   box-shadow: 0px 0px 10px;
+   margin-top: 60px;
+   display: flex;
+}
+/* animasi */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
