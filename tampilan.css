@@ -21,10 +21,9 @@ h1 {
     opacity: 0;
     margin: 2px auto;
     transform: translateY(-30px);     
-    max-width: 700px;
-    height: 650px;
+    max-width: 600px;
+    height: 550px;
     border-radius: 120px 120px 30px 30px;
-    box-sizing: border-box;
     box-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
 a {
@@ -62,3 +61,4 @@ a {
   }
 
 }
+
