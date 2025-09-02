@@ -5,7 +5,7 @@ body {
     scroll-behavior: smooth;
 }
 h1 {
-    display: flex;
+    text-align: center;
     padding: 60px;
     border-bottom: 10px solid;
     font-size: 50px;
@@ -61,4 +61,5 @@ a {
   }
 
 }
+
 
