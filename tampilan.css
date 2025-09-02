@@ -21,7 +21,7 @@ h1 {
     opacity: 0;
     margin: 2px auto;
     transform: translateY(-30px);     
-    max-width: 800px;
+    max-width: 700px;
     height: 650px;
     border-radius: 120px 120px 30px 30px;
     box-sizing: border-box;
@@ -60,4 +60,5 @@ a {
     opacity: 1;
     transform: translateY(0);
   }
+
 }
