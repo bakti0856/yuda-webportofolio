@@ -5,8 +5,8 @@ body {
     scroll-behavior: smooth;
 }
 h1 {
-    text-align: center;
     padding: 60px;
+    text-align: center;
     border-bottom: 10px solid;
     font-size: 50px;
     font-style: italic;
@@ -26,7 +26,7 @@ h2 {
     margin: 2px auto;
     transform: translateY(-30px);     
     max-width: 600px;
-    height: 550px;
+    height: 650px;
     border-radius: 120px 120px 120px 120px;
     box-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
@@ -63,11 +63,4 @@ a {
     opacity: 1;
     transform: translateY(0);
   }
-
 }
-
-
-
-
-
-
