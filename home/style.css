@@ -2,7 +2,7 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: linear-gradient(to right, #887e7e,#7bdaffb9 );
+  background: rgb(12, 18, 56);
   color: #000000; /* white text */
   scroll-behavior: smooth;
 }
@@ -12,7 +12,7 @@ body {
   padding: 15px 30px;
   transform: translateY(-30px);
   animation: slideDown 1s ease forwards;
-  box-shadow: 0px 0px 10px black;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
 
 .navbar ul {
@@ -69,7 +69,7 @@ header {
   animation: fadeIn 1.5s ease forwards;
   opacity: 0;
   border: #ffffff solid 1px;
-  box-shadow: 0px 0px 10px black;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
 .judul {
   text-align: center;
@@ -143,7 +143,7 @@ h2 {
   padding: 15px;
   margin-top: 10px;
   border-left: 4px solid #000000;
-  box-shadow: 0px 0px 5px black;
+  box-shadow: 0px 0px 5px rgb(0, 0, 0);
   border-radius: 8px;
   transform: scale(0.95);
   transition: transform 0.3s ease;
@@ -191,7 +191,7 @@ h1 {
   color: #000000;
   border-radius: 100px;
   text-align: center;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 .gambar {
   width: 200px;
@@ -204,11 +204,12 @@ h1 {
 /* Footer */
 footer {
   text-align: center;
-  background: #8bd6f3b6;
-  color: rgb(0, 0, 0);
-  padding: 15px;
-  margin-top: 40px;
-  border-top: #000000 solid 2px;
+  background: rgb(12, 18, 56);
+  color: rgb(255, 253, 253);
+  padding: 20px;
+  margin-top: 60px;
+  border-top: #000000 solid 4px;
+  box-shadow: 0px 0px 10px white;
 }
 /* Animasi */
 @keyframes fadeIn {

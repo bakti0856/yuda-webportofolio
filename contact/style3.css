@@ -13,7 +13,7 @@ h1 {
 }
 .social-links-container {
     width: 800px;
-    height: 500px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     gap: 20px; 
@@ -64,12 +64,21 @@ h1 {
     box-shadow: 0 6px 12px rgba(220, 39, 67, 0.3);
 }
 
-.tiktok {
+.Tiktok {
     background-color: #000000;
     box-shadow: 0px 0px 5px black;
 } 
 
-.tiktok:hover {
+.Tiktok:hover {
+    background-color: #333333;
+    transform: translateY(-3px);
+}
+.Github {
+    background-color: #000000;
+    box-shadow: 0px 0px 5px black;
+} 
+
+.Github:hover {
     background-color: #333333;
     transform: translateY(-3px);
 }
