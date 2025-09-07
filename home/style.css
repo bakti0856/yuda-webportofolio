@@ -12,7 +12,8 @@ body {
   padding: 15px 30px;
   transform: translateY(-30px);
   animation: slideDown 1s ease forwards;
-  box-shadow: 0px 0px 10px rgb(0, 0, 0);
+  border-bottom: 2px solid white;
+  box-shadow: 0px 0px 10px rgb(255, 252, 252);
 }
 
 .navbar ul {
@@ -70,6 +71,8 @@ header {
   opacity: 0;
   border: #ffffff solid 1px;
   box-shadow: 0px 0px 10px rgb(0, 0, 0);
+  animation: slideDown 1s ease forwards;
+  transform: translateY(-30px);
 }
 .judul {
   text-align: center;
@@ -208,7 +211,7 @@ footer {
   color: rgb(255, 253, 253);
   padding: 20px;
   margin-top: 60px;
-  border-top: #000000 solid 4px;
+  border-top: #cab7b7 solid 4px;
   box-shadow: 0px 0px 10px white;
 }
 /* Animasi */
