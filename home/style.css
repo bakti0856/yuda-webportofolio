@@ -69,7 +69,7 @@ header {
   margin-bottom: 20px;
   animation: fadeIn 1.5s ease forwards;
   opacity: 0;
-  border: #ffffff solid 1px;
+  border: #ffffff solid 3px;
   box-shadow: 0px 0px 10px rgb(0, 0, 0);
   animation: slideDown 1s ease forwards;
   transform: translateY(-30px);
@@ -214,6 +214,13 @@ footer {
   border-top: #cab7b7 solid 4px;
   box-shadow: 0px 0px 10px white;
 }
+#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 /* Animasi */
 @keyframes fadeIn {
   to { opacity: 1; }
