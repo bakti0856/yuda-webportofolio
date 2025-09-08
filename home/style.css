@@ -120,8 +120,8 @@ section {
   opacity: 0;
   animation: slideDown 1s ease forwards;
   transform: translateY(-30px);
-}
 
+}
 
 section.visible {
   transform: translateY(0);
@@ -226,6 +226,12 @@ footer {
 }
 
 /* Animasi */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+}
 @keyframes fadeIn {
   to { opacity: 1; }
 }

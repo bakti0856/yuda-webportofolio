@@ -7,28 +7,19 @@ body {
 h1 {
     padding: 40px;
     text-align: center;
-    border-bottom: 10px solid;
     font-size: 50px;
     font-style: italic;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     box-shadow: 10px black;
-    border-radius: 90%;
-}
-h2 {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
 }
 .bg {
-    background-color: #0bfac6f1;
     animation: slideDown 2s ease forwards;
     opacity: 0;
     margin: 2px auto;
-    transform: translateY(-30px);     
+    transform: translatey(-500px);     
     max-width: 600px;
     height: 500px;
-    border-radius: 120px 120px 120px 120px;
-    box-shadow: 0px 0px 10px rgb(12, 226, 137);
 }
 a {
     text-decoration: none;
