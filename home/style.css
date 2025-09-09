@@ -11,12 +11,16 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    width: 97%;
+    z-index: 1000;
 }
 .navbar {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #8bd6f3b6;
+  background-color: #8bd6f3ee;
   transform: translateY(-30px);
   animation: slideDown 1s ease forwards;
   border-bottom: 2px solid white;
@@ -71,6 +75,7 @@ nav {
 header {
   color: rgb(255, 255, 255);
   padding: 40px 20px ;
+  margin-top: 100px;
   text-align: center;
   animation: slideDown 2s ease forwards;
   opacity: 0;
@@ -133,15 +138,14 @@ section {
   margin: 30px auto;
   border-radius: 12px;
   box-shadow: 0px 0px 10px black;
-  opacity: 0;
   animation: slideDown 1s ease forwards;
-  transform: translateY(-30px);
 
 }
 
 section.visible {
-  transform: translateY(0);
-  opacity: 1;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
   text-transform: none;
 }
 .wa {
