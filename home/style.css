@@ -7,22 +7,29 @@ body {
   scroll-behavior: smooth;
 }
 /* navrbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .navbar {
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
   background-color: #8bd6f3b6;
-  padding: 15px 30px;
   transform: translateY(-30px);
   animation: slideDown 1s ease forwards;
   border-bottom: 2px solid white;
   box-shadow: 0px 0px 10px rgb(255, 252, 252);
-}
+} 
 
 .navbar ul {
   list-style-type: none;
   margin: 0px;
   padding: 0;
+  justify-content: end;
   display: flex;
   gap: 25px;
-  justify-content: center;
   transform: scale(0.95);
   transition: transform 0.5s ease;
 }
@@ -30,6 +37,7 @@ body {
 .navbar li {
   display: inline;
   border-radius: 10px;
+    
 }
 
 .navbar a {
@@ -50,6 +58,14 @@ body {
 }
 .navbar a:active {
   color: #086786;
+}
+.logonav {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  opacity: 0;
+  animation: slideDown 1s ease forwards;
+  transform: translateY(-30px);
 }
 /* Header */
 header {
@@ -170,6 +186,10 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   padding-left: 15px;
+}
+h3 {
+  margin: 0px;
+  padding-top:0;
 }
 /* animasi */
 .card:hover {
