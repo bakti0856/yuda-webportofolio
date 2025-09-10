@@ -28,6 +28,7 @@ nav {
 
 .navbar ul {
   list-style-type: none;
+  padding-left: 70px;
   margin: 0px;
   display: flex;
   gap: 15px;
