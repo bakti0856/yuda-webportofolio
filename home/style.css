@@ -29,7 +29,6 @@ nav {
 .navbar ul {
   list-style-type: none;
   margin: 0px;
-  padding-right: 150px;
   display: flex;
   gap: 15px;
   transform: scale(0.95);
