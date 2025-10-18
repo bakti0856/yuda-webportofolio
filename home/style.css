@@ -226,7 +226,7 @@ h3 {
 }
 .ahli {
   padding: 20px;
-  max-width: 800px;
+  max-width: 600px;
   margin: 30px auto;
   background-color: #8bd6f3b6;
   color: #000000;
@@ -236,6 +236,8 @@ h3 {
 }
 .gambar {
   width: 200px;
+  margin: 2px auto;
+  display: flex;
   height: auto;
   padding: 0px;
   transform: scale(0.95);
@@ -250,7 +252,7 @@ footer {
   padding: 20px;
   margin-top: 60px;
   border-top: #cab7b7 solid 4px;
-  box-shadow: 0px 0px 10px white;
+  box-shadow: 0px 0px 5px white;
 }
 #stars {
   position: fixed;
