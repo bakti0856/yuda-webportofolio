@@ -1,102 +1,79 @@
-// Mobile Menu Toggle
-const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-const mobileMenu = document.getElementById('mobile-menu');
+// ── Mobile Nav ──
+const ham = document.getElementById('ham');
+const mobileNav = document.getElementById('mobile-nav');
 
-mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
+ham.addEventListener('click', () => {
+    mobileNav.classList.toggle('open');
 });
 
-// Close mobile menu when clicking a link
-document.querySelectorAll('.mobile-menu-link').forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-    });
+mobileNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => mobileNav.classList.remove('open'));
 });
 
-// Intersection Observer for scroll animations
-const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-};
+document.addEventListener('click', (e) => {
+    if (!ham.contains(e.target) && !mobileNav.contains(e.target)) {
+        mobileNav.classList.remove('open');
+    }
+});
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
+// ── Fade-in on Scroll ──
+const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            obs.unobserve(e.target);
         }
     });
-}, observerOptions);
+}, { threshold: 0.1 });
 
-document.querySelectorAll('.animate-on-scroll').forEach(el => {
-    observer.observe(el);
-});
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 
-// Progress Bar Animation
-const progressBars = document.querySelectorAll('.progress-fill');
-const progressObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const bar = entry.target;
-            const width = bar.getAttribute('data-width');
+// ── Progress Bars ──
+const barObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        if (e.isIntersecting) {
             setTimeout(() => {
-                bar.style.width = width + '%';
-            }, 200);
-            progressObserver.unobserve(bar);
+                e.target.style.width = e.target.dataset.w + '%';
+            }, 150);
+            barObs.unobserve(e.target);
         }
     });
-}, observerOptions);
+}, { threshold: 0.1 });
 
-progressBars.forEach(bar => {
-    progressObserver.observe(bar);
-});
+document.querySelectorAll('.bar-fill').forEach(b => barObs.observe(b));
 
-// Counter Animation
-function animateCounter(element, target) {
-    let current = 0;
-    const increment = target / 60;
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            element.textContent = Math.floor(target);
-            clearInterval(timer);
-        } else {
-            element.textContent = Math.floor(current);
-        }
-    }, 16);
+// ── Counter Animation ──
+function animateCount(el, target) {
+    const dur = 1500;
+    const start = performance.now();
+    const update = (now) => {
+        const progress = Math.min((now - start) / dur, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.floor(eased * target).toLocaleString('id');
+        if (progress < 1) requestAnimationFrame(update);
+        else el.textContent = target.toLocaleString('id');
+    };
+    requestAnimationFrame(update);
 }
 
-const counters = document.querySelectorAll('.counter');
-const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const counter = entry.target;
-            const target = parseInt(counter.getAttribute('data-target'));
-            animateCounter(counter, target);
-            counterObserver.unobserve(counter);
+const cntObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        if (e.isIntersecting) {
+            animateCount(e.target, parseInt(e.target.dataset.target));
+            cntObs.unobserve(e.target);
         }
     });
-}, observerOptions);
+}, { threshold: 0.3 });
 
-counters.forEach(counter => {
-    counterObserver.observe(counter);
-});
+document.querySelectorAll('.counter').forEach(c => cntObs.observe(c));
 
-// Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
+// ── Smooth Scroll ──
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function (e) {
         const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            const headerOffset = 80;
-            const elementPosition = target.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-            
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
+        if (!target) return;
+        e.preventDefault();
+        const offset = target.getBoundingClientRect().top + window.scrollY - 70;
+        window.scrollTo({ top: offset, behavior: 'smooth' });
     });
 });
