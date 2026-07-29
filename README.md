@@ -1,3 +1,4 @@
-# Dev Front yuda 
-# Web protofolio yuda kecil
-website yuda sederhana menggunakan html css JavaScript
+## Bakti Prima Yuda 
+# Website Portofolio 
+Website Dibuat dengan Hasil  Belajar Berbulan - Bulan 
+Developer Front End / Networking / Troubleshooting
