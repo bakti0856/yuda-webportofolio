@@ -9,7 +9,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css?v=2">
+    <style>
+        .zoomable{cursor:zoom-in}
+        .lightbox{position:fixed;inset:0;z-index:1000;background:rgba(15,14,12,.92);display:none;flex-direction:column}
+        .lightbox.open{display:flex}
+        .lightbox[hidden]{display:none!important}
+        .lb-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;color:#fff;font-family:'Inter',sans-serif;font-size:14px}
+        .lb-cap{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+        .lb-btns{display:flex;gap:8px;flex-shrink:0}
+        .lb-btns button{width:38px;height:38px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;border-radius:4px;font-size:18px;cursor:pointer}
+        .lb-btns button:hover{background:#c0622a}
+        .lb-stage{flex:1;display:flex;align-items:center;justify-content:center;overflow:hidden;touch-action:none;cursor:zoom-in}
+        .lightbox.zoomed .lb-stage{cursor:grab}
+        .lightbox.dragging .lb-stage{cursor:grabbing}
+        #lb-img{max-width:92vw;max-height:80vh;object-fit:contain;user-select:none;-webkit-user-drag:none;transform-origin:center;will-change:transform;border-radius:4px}
+        .lb-hint{text-align:center;color:rgba(255,255,255,.5);font-family:'Inter',sans-serif;font-size:12px;padding:10px 16px 16px}
+        @media(max-width:768px){.lb-hint{display:none}#lb-img{max-width:100vw;max-height:75vh}}
+    </style>
 </head>
 <body>
 
@@ -229,7 +246,7 @@
 </footer>
 
 <!-- Lightbox -->
-<div class="lightbox" id="lightbox" aria-hidden="true">
+<div class="lightbox" id="lightbox" aria-hidden="true" hidden>
     <div class="lb-toolbar">
         <span class="lb-cap" id="lb-cap"></span>
         <div class="lb-btns">
@@ -245,6 +262,6 @@
     <p class="lb-hint">Scroll / cubit untuk zoom • Seret untuk geser • Klik dua kali untuk zoom cepat</p>
 </div>
 
-<script src="./js/main.js"></script>
+<script src="./js/main.js?v=2"></script>
 </body>
 </html>

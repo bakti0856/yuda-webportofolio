@@ -70,12 +70,14 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
         const title = card && card.querySelector('.cert-title, .proj3-title');
         cap.textContent = title ? title.textContent.trim() : el.alt;
         reset();
+        lb.hidden = false;
         lb.classList.add('open');
         lb.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
     }
     function closeLB() {
         lb.classList.remove('open', 'dragging');
+        lb.hidden = true;
         lb.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
         pointers.clear();
